@@ -9,8 +9,8 @@ module ActiveRecordMigrations
     attr_accessor :yaml_config, :database_configuration, :environment, :db_dir, :migrations_paths, :schema_format, :seed_loader
 
     def initialize
-      @yaml_config = 'db/config.yml'
-      @environment = ENV['db'] || Rails.env
+      @yaml_config = 'config/database.yml'
+      @environment = ENV['DB'] || Rails.env
       @db_dir = 'db'
       @migrations_paths = ['db/migrate']
       @schema_format = :ruby # or :sql
